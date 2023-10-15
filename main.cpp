@@ -15,9 +15,8 @@ int main() {
     connection = dbus_bus_get(DBUS_BUS_SESSION, &error);
     check_and_abort(&error);
  
-
     dbus_connection_add_filter(connection, handle_messages, NULL, NULL);
-    dbus_bus_add_match(connection, "type='signal',interface='org.KubOS.PowerManager.PowerStatus'", NULL);
+    dbus_bus_add_match(connection, "type='signal',interface='org.Samsung.VaibhavGarg'", NULL);
 
     while (1)
     {
@@ -30,9 +29,7 @@ int main() {
 static DBusHandlerResult handle_messages(DBusConnection *connection, DBusMessage *message, void *user_data) {
     const char *interface_name = dbus_message_get_interface(message);
     const char *member_name = dbus_message_get_member(message);
-
-    printf("Got Message\n%s\n%s\n", interface_name, member_name);
-
+    cout<<"[Server] Msg rcved from client| InterfaceName: "<< interface_name<<" MemberName: "<< member_name<<endl;
     return DBUS_HANDLER_RESULT_NOT_YET_HANDLED;
 }
  
