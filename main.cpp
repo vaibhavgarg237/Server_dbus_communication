@@ -12,7 +12,7 @@ int main() {
     DBusError error;
  
     dbus_error_init(&error);
-    connection = dbus_bus_get(DBUS_BUS_SESSION, &error);
+    connection = dbus_bus_get(DBUS_BUS_SYSTEM, &error);
     check_and_abort(&error);
  
     dbus_connection_add_filter(connection, handle_messages, NULL, NULL);
