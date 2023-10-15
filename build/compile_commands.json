@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/vaibhav/Desktop/attempt4/server/build",
+  "command": "/usr/bin/g++  -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -g -o CMakeFiles/wtfIsDbus.dir/main.cpp.o -c /home/vaibhav/Desktop/attempt4/server/main.cpp",
+  "file": "/home/vaibhav/Desktop/attempt4/server/main.cpp"
+}
+]
